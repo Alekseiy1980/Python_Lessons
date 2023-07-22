@@ -58,19 +58,66 @@
 Кортеж занимает меньше места в памяти и работает быстрее, по сравнению со списками
 типо в них записывать пароли
 '''
-t = ()          #создание пустого кортежа
-print(type(t))  #class <'typle'>
-t = (1.)
-print(type(t))
-t = (1)
-print(type(t))
-t = (28, 9, 1990,)  #кортеж
-print(type(t))
+# t = ()          #создание пустого кортежа
+# print(type(t))  #class <'typle'>
+# t = (1.)
+# print(type(t))
+# t = (1)
+# print(type(t))
+# t = (28, 9, 1990,)  #кортеж
+# print(type(t))
+#
+# v = [1, 5, 8]  #лист
+# print(v)
+# print(type(v))
+#
+# v = tuple(v)    # лист преобразование в кортеж
+# print(v)
+# print(type(v))
+#
+# a,b = 1,2       # множественное присваивание
+# c = d = 1
+#
+# print(f' a = {a}, b = {b}, c = {c}, d = {d}')
+# a, b, c = v     # распаковка кортежа
+# print(f' a = {a}, b = {b}, c = {c}')
+#
+# '''
+# Вывод кортежей
+# '''
+# t = (1, 2, 3, 4, 7,)
+# print(t)
+# for i in t:
+#     print(i)
+#
+# print(t)
+# for i in range(len(t)):     # так можно и со списками работать
+#     print(t[i])
 
-v = [1, 5, 8]  #лист
-print(v)
-print(type(v))
+'''
+Словари - неупорядоченные коллекции произвольных обьектов с доупом по ключу
+В списках в качестве ключа используется индекс элемента.
+В словаре для определения элемента используется значения ключа(строка, число).
+'''
+dictionery = {}     # создали пустой словарь
 
-v = tuple(v)    # лист преобразование в кортеж
-print(v)
-print(type(v))
+dictionery = {'up': 'w', 'left': 'a', 'down': 's', 'right': 'd'}
+print(dictionery['left'])
+print(dictionery['up'])
+dictionery['left'] = '<='
+print(dictionery['left'])
+# print(dictionery['type'])
+del dictionery['left']
+for item in dictionery:     # вывод словаря
+    print('{}: {}' .format(item, dictionery[item]))
+dictionery[678] = 7654654       # добавили ключ и значение
+for(k,v) in dictionery.items():     # вывод словаря
+    print(k, v)
+print(dictionery)
+d = dict()          # создали пустой словарь
+d['q'] = 'qwerty'   # записали в словарь
+print(d)            # вывели словарь
+d['w'] = 'werty'    # добавили ключ и значение
+print(d)
+print(d['q'])
+print(dictionery.items()) # Вывод словаря, содержащий список элемент - картежей, и хронящий два значения( ключ и значения)
