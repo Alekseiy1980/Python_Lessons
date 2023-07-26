@@ -18,7 +18,20 @@
 #
 # print(sum_str('q', 'e', 'l'))
 
-
-import modul1 as m1
-
-print(m1.max1(51,9))
+'''
+подключение своих файлов(библиотек)
+'''
+# # # # import modul1 as m1
+# # # #
+# # # # print(m1.max1(51,9))
+# # #
+# # # from modul1 import max1
+# # #
+# # # print(1,9)
+# #
+# # import modul1 as m1
+# #
+# # print(m1.max1(13,6))
+#
+# from modul1 import*
+# print(max1(7,134))
