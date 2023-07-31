@@ -46,7 +46,64 @@
 # print(result)
 
 '''
-задача 27
-Определить сколько различных слов содержится в тексте
+Задача №27. Решение в группах
+Пользователь вводит текст(строка). Словом считается
+последовательность непробельных символов идущих
+подряд, слова разделены одним или большим числом
+пробелов. Определите, сколько различных слов
+содержится в этом тексте.
+Input: She sells sea shells on the sea shore The shells
+that she sells are sea shells I'm sure.So if she sells sea
+shells on the sea shore I'm sure that the shells are sea
+shore shells
+Output: 13
 '''
+# text= "She sells sea shells on the sea shore The  shells that she sells u h e d  sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
+# count: int = 0
+# text = text.replace('.', ' ').lower().split()
+# # new_list = text.split()
+# new_arr = {}
+#
+# for i in text:
+#     if i not in new_arr:
+#         new_arr[i] = 0
+#         count += 1
+#     else:
+#         new_arr[i] += 1
+#
+# print(count)
+'''
+второй вариант решения этой задачи
 
+'''
+# text = "She sells sea shells on the sea shore The  shells that she sells   sea shells I'm sure.So if she sells sea shells on the sea sh"
+# text = text.replace('.', ' ').lower().split()
+# print(len(set(text)))
+
+'''
+Задача №29. Решение в группах
+Ваня и Петя поспорили, кто быстрее решит
+следующую задачу: “Задана последовательность
+неотрицательных целых чисел. Требуется определить
+значение наибольшего элемента
+последовательности, которая завершается первым
+встретившимся нулем (число 0 не входит в
+последовательность)”. Однако 2 друга оказались не
+такими смышлеными. Никто из ребят не смог до
+конца сделать это задание. Они решили так: у кого
+будет меньше ошибок в коде, тот и выиграл спор. За
+помощью товарищи обратились к Вам, студентам
+'''
+def max (max_num: int ,i: int) -> int :
+    if max_num < i:
+        max_num = i
+        return  max_num
+    return max_num
+
+number: int = -1
+max_num: int = 0
+
+while number != 0:
+    number = int(input("введите число, 0 - для завершения "))
+    max_num = max(max_num, number)
+print (max_num)
