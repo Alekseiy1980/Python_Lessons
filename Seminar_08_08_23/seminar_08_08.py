@@ -156,28 +156,17 @@
 # '''
 #
 # # print(list(filter(lambda item: True if item > 4 else False,sp)))
-# def same_by(characteristic, objects):
-#     new = list(filter(characteristic, objects))
-#     print(new)
-#
-#     if new == objects:
-#         return True
-#
-#     return False
-# def char(x):
-#     return x%2==0
-#
-#
-#
-#
-# values = [0, 2, 10, 6]
-# if same_by(lambda x: x % 2, values):
-#     print('same')
-# else:
-#     print('different')
-#
-#
-# print(same_by(char,values))
+def same_by(characteristic, objects):
+
+    el = len(list(filter(characteristic,objects)))
+    print(el)
+    return not el or el == len(objects)
+values = [0, 2, 10, 6]
+values2 = [1, 3, 5, 7, 8]
+if same_by(lambda x: x % 2, values2):
+    print('same')
+else:
+    print('different')
 # '''
 # Необходимо написать программу для автоматического перевода различных валютных счетов в рублевые.
 # Начальные данные программы это три различных списка - Фамилии владельцев банковских счетов, указание валют счетов,
@@ -195,34 +184,31 @@
 #   На выходе программы должны быть три пары значений - фамилии владельцев счетов и состояние рублевого счета.
 # '''
 
-# # # # # # # def calc_power(dgree):
-# # # # # # #     def pawer(number):
-# # # # # # #         return number ** dgree
-# # # # # # #     return pawer
-def balans_calc(balances):
-    def power(kyrs):
-        return balances * kyrs
-    return power
 
-def calc(sp):
-    dollar = 90
-    euro = 99
-    for item in sp:
-        if item[1] =='доллар':
-            balans_calc(dollar)
-        else:
-            balans_calc(euro)
-    return sp
-
-def list_zip(name, currence_name, balances):
-    sp = []
-    for n,c,b in zip(name, currence_name,balances):
-        sp.append([n,c,b])
-    return sp
-
-surnames = ["Иванов", "Карпов", "Иголкин"]
-currency_name = ["рубль", "доллар", "евро"]
-balances = [30000, 40000, 50000]
-
-sp_zip = list_zip(surnames,currency_name,balances)
-print(sp_zip)
+#
+# def calc(valuta, balans):
+#     result = balans
+#     dollar = 90
+#     euro = 99
+#     if valuta == 'доллар':
+#         result *= dollar
+#     elif valuta == 'евро':
+#         result *= euro
+#     return result
+#
+#
+#
+#
+# def list_zip(name, currence_name):
+#     sp = []
+#     for n,c in zip(name, currence_name):
+#         sp.append([n,c])
+#     return sp
+#
+# surnames = ["Иванов", "Карпов", "Иголкин"]
+# currency_name = ["рубль", "доллар", "евро"]
+# balances = [30000, 40000, 50000]
+# new_balance = list(map(calc,currency_name,balances))
+# print(new_balance)
+# sp_zip = list_zip(surnames,new_balance)
+# print(sp_zip)
